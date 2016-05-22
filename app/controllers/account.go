@@ -9,4 +9,3 @@ type Accounts struct{
 func (c Accounts) CreateAccount() revel.Result {
 	return c.Render()
 }
-
