@@ -18,6 +18,7 @@ GET     /accounts/create                        404
 
 # Order Payment
 GET     /orders/:orderId/pay                    Orders.GetPayment
+POST    /orders/api/create                      Orders.ApiCreate
 
 # Map static resources from the /app/public folder to the /public path
 GET     /public/*filepath                       Static.Serve("public")
