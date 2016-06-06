@@ -10,3 +10,7 @@ func(c Orders) Create() revel.Result  {
 	return c.Render()
 }
 
+func (c Orders) GetPayment(orderId int) revel.Result  {
+	println("The orderId:", orderId)
+	return c.RenderTemplate("orders/payment.html")
+}
