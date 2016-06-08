@@ -26,6 +26,11 @@ func (c Accounts) CreatePost() revel.Result {
 	c.Validation.Required(account.ZipCode)
 	c.Validation.Length(account.ZipCode, 5)
 
+	//Keep the data in the data context for later use
+	c.Validation.Keep()
+	//Make the flash params available to the client
+	c.FlashParams()
+
 	fmt.Printf("Has Error: %v\n", c.Validation.HasErrors())
 
 	fmt.Printf("Account Info:, %v\n", account)
